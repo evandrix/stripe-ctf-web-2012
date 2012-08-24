@@ -1,0 +1,281 @@
+<html><head><title>web.Server Traceback (most recent call last)</title></head><body><b>web.Server Traceback (most recent call last):</b>
+
+
+<style type="text/css">
+    p.error {
+      color: red;
+      font-family: Verdana, Arial, helvetica, sans-serif;
+      font-weight: bold;
+    }
+
+    div {
+      font-family: Verdana, Arial, helvetica, sans-serif;
+    }
+
+    div.stackTrace {
+    }
+
+    div.frame {
+      padding: 1em;
+      background: white;
+      border-bottom: thin black dashed;
+    }
+
+    div.firstFrame {
+      padding: 1em;
+      background: white;
+      border-top: thin black dashed;
+      border-bottom: thin black dashed;
+    }
+
+    div.location {
+    }
+
+    div.snippet {
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      background: #FFFFDD;
+    }
+
+    div.snippetHighlightLine {
+      color: red;
+    }
+
+    span.code {
+      font-family: "Courier New", courier, monotype;
+    }
+
+    span.function {
+      font-weight: bold;
+      font-family: "Courier New", courier, monotype;
+    }
+
+    table.variables {
+      border-collapse: collapse;
+      margin-left: 1em;
+    }
+
+    td.varName {
+      vertical-align: top;
+      font-weight: bold;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+
+    td.varValue {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+
+    div.variables {
+      margin-bottom: 0.5em;
+    }
+
+    span.heading {
+      font-weight: bold;
+    }
+
+    div.dict {
+      background: #cccc99;
+      padding: 2px;
+      float: left;
+    }
+
+    td.dictKey {
+      background: #ffff99;
+      font-weight: bold;
+    }
+
+    td.dictValue {
+      background: #ffff99;
+    }
+
+    div.list {
+      background: #7777cc;
+      padding: 2px;
+      float: left;
+    }
+
+    div.listItem {
+      background: #9999ff;
+    }
+
+    div.instance {
+      background: #cc7777;
+      padding: 2px;
+      float: left;
+    }
+
+    span.instanceName {
+      font-weight: bold;
+      display: block;
+    }
+
+    span.instanceRepr {
+      background: #ff9999;
+      font-family: "Courier New", courier, monotype;
+    }
+
+    div.function {
+      background: orange;
+      font-weight: bold;
+      float: left;
+    }
+</style>
+<a href="#tbend">
+<p class="error">&lt;type 'exceptions.TypeError'&gt;: object of type 'int' has no len()</p>
+</a><div class="stackTrace"><div class="firstFrame">
+<div class="location">/usr/lib/python2.6/dist-packages/twisted/web/server.py, line 125 in <span class="function">process</span></div>
+<div class="snippet">
+<div class="snippetLine"><span class="lineno">123</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;try:</span></div>
+
+<div class="snippetLine"><span class="lineno">124</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resrc = self.site.getResourceFor(self)</span></div>
+
+<div class="snippetHighlightLine"><span class="lineno">125</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.render(resrc)</span></div>
+
+<div class="snippetLine"><span class="lineno">126</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;except:</span></div>
+</div><div class="variables"><b>Self</b><table class="variables">
+<tr class="varRow"><td class="varName">site</td><td class="varValue"><div class="instance"><span class="instanceName">twisted.web.server.Site instance @ 0x2b285f0</span>
+              <span class="instanceRepr">&lt;twisted.web.server.Site instance at 0x2b285f0&gt;</span></div>
+              </td></tr>
+</table></div><div class="variables"><b>Locals</b><table class="variables">
+<tr class="varRow"><td class="varName">resrc</td><td class="varValue"><code>&lt;common.HTTPServer object at 0x2b13250&gt;</code></td></tr>
+
+<tr class="varRow"><td class="varName">self</td><td class="varValue"><div class="instance"><span class="instanceName">twisted.web.server.Request instance @ 0x7f4be2109fc8</span>
+              <span class="instanceRepr">&lt;POST /user-wuwdhsoezx/ HTTP/1.0&gt;</span></div>
+              </td></tr>
+</table></div></div><div class="frame">
+<div class="location">/usr/lib/python2.6/dist-packages/twisted/web/server.py, line 132 in <span class="function">render</span></div>
+<div class="snippet">
+<div class="snippetLine"><span class="lineno">130</span><span class="code">&nbsp;&nbsp;def render(self, resrc):</span></div>
+
+<div class="snippetLine"><span class="lineno">131</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;try:</span></div>
+
+<div class="snippetHighlightLine"><span class="lineno">132</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body = resrc.render(self)</span></div>
+
+<div class="snippetLine"><span class="lineno">133</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;except UnsupportedMethod, e:</span></div>
+</div><div class="variables"><b>Locals</b><table class="variables">
+<tr class="varRow"><td class="varName">resrc</td><td class="varValue"><code>&lt;common.HTTPServer object at 0x2b13250&gt;</code></td></tr>
+
+<tr class="varRow"><td class="varName">self</td><td class="varValue"><div class="instance"><span class="instanceName">twisted.web.server.Request instance @ 0x7f4be2109fc8</span>
+              <span class="instanceRepr">&lt;POST /user-wuwdhsoezx/ HTTP/1.0&gt;</span></div>
+              </td></tr>
+</table></div><div class="variables"><b>Globals</b><table class="variables">
+<tr class="varRow"><td class="varName">UnsupportedMethod</td><td class="varValue"><code>&lt;class 'twisted.web.error.UnsupportedMethod'&gt;</code></td></tr>
+</table></div></div><div class="frame">
+<div class="location">/usr/lib/python2.6/dist-packages/twisted/web/resource.py, line 210 in <span class="function">render</span></div>
+<div class="snippet">
+<div class="snippetLine"><span class="lineno">208</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from twisted.web.error import UnsupportedMethod</span></div>
+
+<div class="snippetLine"><span class="lineno">209</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raise UnsupportedMethod(getattr(self, 'allowedMethods', ()))</span></div>
+
+<div class="snippetHighlightLine"><span class="lineno">210</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;return m(request)</span></div>
+
+<div class="snippetLine"><span class="lineno">211</span><span class="code"></span></div>
+</div><div class="variables"><b>Locals</b><table class="variables">
+<tr class="varRow"><td class="varName">m</td><td class="varValue"><code>&lt;bound method HTTPServer.render_POST of &lt;common.HTTPServer object at 0x2b13250&gt;&gt;</code></td></tr>
+
+<tr class="varRow"><td class="varName">self</td><td class="varValue"><code>&lt;common.HTTPServer object at 0x2b13250&gt;</code></td></tr>
+
+<tr class="varRow"><td class="varName">request</td><td class="varValue"><div class="instance"><span class="instanceName">twisted.web.server.Request instance @ 0x7f4be2109fc8</span>
+              <span class="instanceRepr">&lt;POST /user-wuwdhsoezx/ HTTP/1.0&gt;</span></div>
+              </td></tr>
+</table></div></div><div class="frame">
+<div class="location">/mount/home/user-wuwdhsoezx/public_html/common.py, line 31 in <span class="function">render_POST</span></div>
+<div class="snippet">
+<div class="snippetLine"><span class="lineno">29</span><span class="code">&nbsp;&nbsp;def render_POST(self, request):</span></div>
+
+<div class="snippetLine"><span class="lineno">30</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;processor_instance = self.processor(request, self.args)</span></div>
+
+<div class="snippetHighlightLine"><span class="lineno">31</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;processor_instance.processRaw()</span></div>
+
+<div class="snippetLine"><span class="lineno">32</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;return server.NOT_DONE_YET</span></div>
+</div><div class="variables"><b>Self</b><table class="variables">
+<tr class="varRow"><td class="varName">args</td><td class="varValue"><div class="list"><span class="heading">List instance @ 0x7f4be2106098</span><div class="listItem"><code>('127.0.0.1', 12347)</code></div><div class="listItem"><code>('127.0.0.1', 12348)</code></div><div class="listItem"><code>('127.0.0.1', 12349)</code></div><div class="listItem"><code>('127.0.0.1', 12350)</code></div></div></td></tr>
+
+<tr class="varRow"><td class="varName">processor</td><td class="varValue"><code>&lt;class '__main__.PrimaryProcessor'&gt;</code></td></tr>
+</table></div><div class="variables"><b>Locals</b><table class="variables">
+<tr class="varRow"><td class="varName">processor_instance</td><td class="varValue"><code>&lt;__main__.PrimaryProcessor object at 0x2b25c10&gt;</code></td></tr>
+
+<tr class="varRow"><td class="varName">self</td><td class="varValue"><code>&lt;common.HTTPServer object at 0x2b13250&gt;</code></td></tr>
+
+<tr class="varRow"><td class="varName">request</td><td class="varValue"><div class="instance"><span class="instanceName">twisted.web.server.Request instance @ 0x7f4be2109fc8</span>
+              <span class="instanceRepr">&lt;POST /user-wuwdhsoezx/ HTTP/1.0&gt;</span></div>
+              </td></tr>
+</table></div><div class="variables"><b>Globals</b><table class="variables">
+<tr class="varRow"><td class="varName">server</td><td class="varValue"><code>&lt;module 'twisted.web.server' from '/usr/lib/python2.6/dist-packages/twisted/web/server.pyc'&gt;</code></td></tr>
+</table></div></div><div class="frame">
+<div class="location">/mount/home/user-wuwdhsoezx/public_html/common.py, line 53 in <span class="function">processRaw</span></div>
+<div class="snippet">
+<div class="snippetLine"><span class="lineno">51</span><span class="code"></span></div>
+
+<div class="snippetLine"><span class="lineno">52</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;try:</span></div>
+
+<div class="snippetHighlightLine"><span class="lineno">53</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.process(parsed)</span></div>
+
+<div class="snippetLine"><span class="lineno">54</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;except Halt:</span></div>
+</div><div class="variables"><b>Locals</b><table class="variables">
+<tr class="varRow"><td class="varName">self</td><td class="varValue"><code>&lt;__main__.PrimaryProcessor object at 0x2b25c10&gt;</code></td></tr>
+
+<tr class="varRow"><td class="varName">parsed</td><td class="varValue"><div class="dict"><span class="heading">Dictionary instance @ 0x2b71960</span><table class="dict"><tr><td class="dictKey"><code>u'webhooks'</code></td><td class="dictValue"><div class="list"><span class="heading">List instance @ 0x7f4be210a2d8</span></div></td></tr><tr><td class="dictKey"><code>u'password'</code></td><td class="dictValue"><code>123456789012</code></td></tr></table></div></td></tr>
+</table></div><div class="variables"><b>Globals</b><table class="variables">
+<tr class="varRow"><td class="varName">Halt</td><td class="varValue"><code>&lt;class 'common.Halt'&gt;</code></td></tr>
+</table></div></div><div class="frame">
+<div class="location">./primary_server, line 33 in <span class="function">process</span></div>
+<div class="snippet">
+<div class="snippetLine"><span class="lineno">31</span><span class="code"></span></div>
+
+<div class="snippetLine"><span class="lineno">32</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;self.remaining_chunk_servers = self.chunk_servers[:]</span></div>
+
+<div class="snippetHighlightLine"><span class="lineno">33</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;self.remaining_chunks = self.chunkPassword(password)</span></div>
+
+<div class="snippetLine"><span class="lineno">34</span><span class="code"></span></div>
+</div><div class="variables"><b>Self</b><table class="variables">
+<tr class="varRow"><td class="varName">remaining_chunk_servers</td><td class="varValue"><div class="list"><span class="heading">List instance @ 0x2b2e248</span><div class="listItem"><code>('127.0.0.1', 12347)</code></div><div class="listItem"><code>('127.0.0.1', 12348)</code></div><div class="listItem"><code>('127.0.0.1', 12349)</code></div><div class="listItem"><code>('127.0.0.1', 12350)</code></div></div></td></tr>
+
+<tr class="varRow"><td class="varName">chunk_servers</td><td class="varValue"><div class="list"><span class="heading">List instance @ 0x7f4be2106098</span><div class="listItem"><code>('127.0.0.1', 12347)</code></div><div class="listItem"><code>('127.0.0.1', 12348)</code></div><div class="listItem"><code>('127.0.0.1', 12349)</code></div><div class="listItem"><code>('127.0.0.1', 12350)</code></div></div></td></tr>
+</table></div><div class="variables"><b>Locals</b><table class="variables">
+<tr class="varRow"><td class="varName">password</td><td class="varValue"><code>123456789012</code></td></tr>
+
+<tr class="varRow"><td class="varName">self</td><td class="varValue"><code>&lt;__main__.PrimaryProcessor object at 0x2b25c10&gt;</code></td></tr>
+</table></div></div><div class="frame">
+<div class="location">./primary_server, line 108 in <span class="function">chunkPassword</span></div>
+<div class="snippet">
+<div class="snippetLine"><span class="lineno">106</span><span class="code"></span></div>
+
+<div class="snippetLine"><span class="lineno">107</span><span class="code">&nbsp;&nbsp;def chunkPassword(self, password):</span></div>
+
+<div class="snippetHighlightLine"><span class="lineno">108</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;return common.chunkPassword(len(self.chunk_servers), password, self)</span></div>
+
+<div class="snippetLine"><span class="lineno">109</span><span class="code"></span></div>
+</div><div class="variables"><b>Self</b><table class="variables">
+<tr class="varRow"><td class="varName">chunk_servers</td><td class="varValue"><div class="list"><span class="heading">List instance @ 0x7f4be2106098</span><div class="listItem"><code>('127.0.0.1', 12347)</code></div><div class="listItem"><code>('127.0.0.1', 12348)</code></div><div class="listItem"><code>('127.0.0.1', 12349)</code></div><div class="listItem"><code>('127.0.0.1', 12350)</code></div></div></td></tr>
+</table></div><div class="variables"><b>Locals</b><table class="variables">
+<tr class="varRow"><td class="varName">self</td><td class="varValue"><code>&lt;__main__.PrimaryProcessor object at 0x2b25c10&gt;</code></td></tr>
+
+<tr class="varRow"><td class="varName">password</td><td class="varValue"><code>123456789012</code></td></tr>
+</table></div><div class="variables"><b>Globals</b><table class="variables">
+<tr class="varRow"><td class="varName">common</td><td class="varValue"><code>&lt;module 'common' from '/mount/home/user-wuwdhsoezx/public_html/common.pyc'&gt;</code></td></tr>
+</table></div></div><div class="frame">
+<div class="location">/mount/home/user-wuwdhsoezx/public_html/common.py, line 99 in <span class="function">chunkPassword</span></div>
+<div class="snippet">
+<div class="snippetLine"><span class="lineno">97</span><span class="code">def chunkPassword(chunk_count, password, request=None):</span></div>
+
+<div class="snippetLine"><span class="lineno">98</span><span class="code">&nbsp;&nbsp;# Equivalent to ceil(password_length / chunk_count)</span></div>
+
+<div class="snippetHighlightLine"><span class="lineno">99</span><span class="code">&nbsp;&nbsp;chunk_size = (len(password) + chunk_count - 1) / chunk_count</span></div>
+
+<div class="snippetLine"><span class="lineno">100</span><span class="code"></span></div>
+</div><div class="variables"><b>Locals</b><table class="variables">
+<tr class="varRow"><td class="varName">request</td><td class="varValue"><code>&lt;__main__.PrimaryProcessor object at 0x2b25c10&gt;</code></td></tr>
+
+<tr class="varRow"><td class="varName">password</td><td class="varValue"><code>123456789012</code></td></tr>
+
+<tr class="varRow"><td class="varName">chunk_count</td><td class="varValue"><code>4</code></td></tr>
+</table></div><div class="variables"><b>Globals</b><table class="variables">
+<tr class="varRow"><td class="varName">chunkPassword</td><td class="varValue"><div class="function">function chunkPassword in file /mount/home/user-wuwdhsoezx/public_html/common.py at line 97</div></td></tr>
+</table></div></div></div><a name="tbend"> </a>
+<p class="error">&lt;type 'exceptions.TypeError'&gt;: object of type 'int' has no len()</p>
+
+
+</body></html>
